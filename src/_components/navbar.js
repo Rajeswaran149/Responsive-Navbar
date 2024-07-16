@@ -8,6 +8,7 @@ import { MdPersonOutline } from "react-icons/md";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import Image from "./image"
+import myImage from './images.jpeg'
 
 const Navbar = () => {
   const [ isMenuOpen , setIsMenuOpen ] = useState(false);
@@ -23,11 +24,11 @@ const Navbar = () => {
   return (
     <nav className='bg-red-500 p-6 m-1 rounded-t-md'>
     <div className='flex space-x-2 items-center justify-between md:hidden'>
-          <div className='text-white font-semibold text-2xl'>
-            SimuVerse
+          <div className='text-white font-serif text-2xl'>
+            𝒮𝒾𝓂𝓊𝒱𝑒𝓇𝓈𝑒
           </div>
           <div className='flex md:hidden space-x-2 items-center'>
-            <button className=' text-white'>
+            <button className=' text-white font-bold'>
               Log in
             </button>
             <IoMdMenu className='text-white size-7 hover:bg-red-600 rounded' onClick={toggleMenu} />
@@ -67,13 +68,13 @@ const Navbar = () => {
 
     <div className= ' hidden bg-white p-4 rounded-sm md:flex justify-between items-center'>
 
-      {/* Logo/Title */}
+  
       <div className='text-red-600 font-semibold text-2xl '>
-        SimuVerse
+         𝒮𝒾𝓂𝓊𝒱𝑒𝓇𝓈𝑒
       </div>
 
       {/* Desktop View: Menu Items  */}
-      <div className='hidden md:flex md:space-x-5 text-black font-semibold'>
+      <div className='hidden md:flex md:flex-row text-black font-semibold'>
         <a className=' hover:bg-red-500 px-2 rounded-sm' href='#'>Home</a>
         <a className=' hover:bg-red-500 px-2 rounded-sm' href='#'>Store</a>
         <a className=' hover:bg-red-500 px-2 rounded-sm' href='#'>Contact</a>
@@ -81,7 +82,7 @@ const Navbar = () => {
         <a className=' hover:bg-red-500 px-2 rounded-sm' href='#'>Avatar</a>
       </div>
       
-      {/* Desktop View: Icons and Login/Signup */}
+      {/* Desktop View:Icons and Login/Signup */}
       <div className=' md:flex md:space-x-2 md:justify-between items-center'>
         <div className='flex flex-row'>
           <div className=' border border-gray-300 p-1 rounded-l-sm'>
@@ -107,7 +108,9 @@ const Navbar = () => {
       
     </div>
     <div className='md:hidden'>
-      <Image />
+      {/* <Image /> */}
+      {/* replace here to original image */}
+      <img className='p-4 rounded-lg' src={myImage} alt="simuverse image" />
     
     </div>
     <div className='md:hidden'>
